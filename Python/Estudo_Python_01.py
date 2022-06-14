@@ -11,3 +11,5 @@ elif valor >= 10:
 
 else:
     print("Entrou na condição di else")
+
+print("Ok!")
