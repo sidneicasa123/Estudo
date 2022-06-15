@@ -13,4 +13,4 @@ while qtde <= 10:
 
     qtde2 = 1
 
-print("Estrutura While")
+print("Estrutura %i" %(qtde))
