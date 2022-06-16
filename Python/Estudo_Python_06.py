@@ -1,6 +1,22 @@
-tupla = 1, 2, 3, 4, 5, (10, 20, 30)
 
-print(tupla)
+def ListaSupermercado01():
+    valor = 0
+    lista = []
+
+    def Ingredientes(itens):
+        nonlocal lista, valor
+        lista.append(itens)
+
+        print(valor, lista[valor])
+
+        valor = valor + 1
+
+    return Ingredientes
 
 
-print(tupla[5][0])
+pegaLista = ListaSupermercado01()
+
+pegaLista("Arroz")
+pegaLista("Feijão")
+pegaLista("Farinha")
+pegaLista("Laranja")
