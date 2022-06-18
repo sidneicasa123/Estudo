@@ -1,19 +1,56 @@
+
+
+# ===================================================================================================================================
+
 class Minha_Primeira_Classe():
 
     # Construtor
+    def __init__(self, cao):
+
+        self.cao = cao
+
+    def cachorro(self):
+
+        self.cao.late()
+
+
+class Cachorro():
+
+    # Construtor
     def __init__(self):
-        self.Nome = "Sidnei Lima Santos"
-        self.Idade = 39
-        self.Sexo = "Masculino"
-        self.Estado_Civil = "Casado"
+        self.Latir = "AuAuAuAuAuAuAuAu!!!!!"
 
-    # Mettodos
-    def Imprime_Pessoa(self):
-
-        print(self.Nome, "\n", self.Idade, "\n",
-              self.Sexo, "\n", self.Estado_Civil)
+    def late(self):
+        print(self.Latir)
 
 
-pessoa = Minha_Primeira_Classe()
+cao = Cachorro()
+pessoa = Minha_Primeira_Classe(cao)
+pessoa.cachorro()
 
-pessoa.Imprime_Pessoa()
+
+# herança de classe.
+
+class heranca(Minha_Primeira_Classe):
+    def __init__(self, cao):
+        super().__init__(cao)
+
+
+heranca = heranca(cao)
+
+heranca.cachorro()
+
+
+# private
+
+class privado(object):
+    def __init__(self):
+        self.__idade = 10
+
+    def imprime(self):
+        print(self.__idade)
+
+
+pri = privado()
+
+pri.imprime()
