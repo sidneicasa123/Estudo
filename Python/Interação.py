@@ -9,7 +9,6 @@
 
 
 # Duas maneira de realizar interação dentro de um arquivo com Python
-
 # 1 opção
 lendo_arquivo = open(
     r"C:\Users\sid-j\OneDrive\Documentos\Estudos\Python\Arquivo.csv", "r")
@@ -20,7 +19,9 @@ for linha in open(r"C:\Users\sid-j\OneDrive\Documentos\Estudos\Python\Arquivo.cs
 # 2 Opção
 arquivo = open(
     r"C:\Users\sid-j\OneDrive\Documentos\Estudos\Python\Arquivo.csv")
+
 arquivo = iter(arquivo)
+
 while True:
     try:
         pega = next(arquivo)
